@@ -7,6 +7,7 @@
             <button-container id="ui-button" />
             <input-container id="ui-input" />
             <toast-container id="ui-toast" />
+            <radio-container id="ui-radio" />
         </div>
 
     </div>
@@ -18,12 +19,14 @@ import Menu from './components/pages/Menu.vue';
 import ButtonContainer from './components/components/ButtonContainer.vue';
 import InputContainer from './components/components/InputContainer.vue';
 import ToastContainer from './components/components/ToastContainer.vue';
+import RadioContainer from './components/components/RadioContainer.vue';
 
 export default {
     components: {
         'button-container': ButtonContainer,
         'input-container': InputContainer,
         'toast-container': ToastContainer,
+        'radio-container': RadioContainer,
         'menu-container': Menu
     }
 }

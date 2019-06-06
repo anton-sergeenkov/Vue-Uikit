@@ -5,6 +5,7 @@
             <li><a href="#ui-button">Button</a></li>
             <li><a href="#ui-input">InputText</a></li>
             <li><a href="#ui-toast">Toast</a></li>
+            <li><a href="#ui-radio">Radio</a></li>
         </ul>
     </div>
 </template>

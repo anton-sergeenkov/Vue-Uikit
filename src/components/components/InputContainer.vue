@@ -6,8 +6,11 @@
         <!---------------------------------------->
 
         <h2>theme="normal | primary"</h2>
-        <ui-input type="text" theme="normal" v-model="inputText" placeholder="Typed..."></ui-input>
-        <ui-input theme="primary" placeholder="Typed..."></ui-input>
+        <ui-input theme="normal" label="Имя" type="text" v-model="inputName"></ui-input>
+
+        <h2>label="Комментарий"</h2>
+        <ui-input theme="normal" label="E-mail" type="text" v-model="inputEmail"></ui-input>
+
     </div>
 
 </template>
@@ -16,15 +19,15 @@
 export default {
     data() {
         return {
-            inputText: ''
+            inputName: '',
+            inputEmail: ''
         }
     }
 }
 </script>
 
 <style>
-
 .input-wrapper {
-    margin: 30px 0px;
+    margin: 20px 0px;
 }
 </style>

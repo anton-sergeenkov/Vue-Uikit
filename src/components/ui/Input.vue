@@ -1,7 +1,7 @@
 <template>
     <div class="input-wrapper">
         <input :class="classes" :value="value" @focus="onFocus" @blur="onBlur($event.target.value)" @input="$emit('input', $event.target.value)" class="ui-input">
-        <label :class="{ active:focused }">Name</label>
+        <label :class="{ active:focused }" v-html="label"></label>
     </div>
 </template>
 
@@ -15,7 +15,8 @@ export default {
     props: {
         theme: { type: String, default: 'normal' },
         block: { type: Boolean },
-        value: { type: String }
+        value: { type: String },
+        label: { type: String }
     },
     methods: {
         onFocus() {
@@ -30,7 +31,8 @@ export default {
     computed: {
         classes() {
             return {
-                ['ui-input--'+this.theme]: true
+                ['ui-input--'+this.theme]: true,
+                ['active']: this.focused
             };
         }
     }
@@ -41,10 +43,11 @@ export default {
 $color-light: #747474;
 $font-size: 15px;
 $color-accent: #1867c0;
+$padding: 10px 10px 10px 5px;
 
 .ui-input {
     width: 100%; 
-    padding: 10px;
+    padding: $padding;
     border: none;
     border-radius: 2px;
     font-family: inherit;
@@ -54,6 +57,9 @@ $color-accent: #1867c0;
     position: relative;
     background: none;
 }
+.ui-input.active {
+    border-bottom: 1px solid $color-accent;
+}
 .input-wrapper {
     width: 100%;
     position: relative;
@@ -62,19 +68,18 @@ label {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 10px;
+    padding: $padding;
     transition: 0.4s;
     z-index: 0;
     font-size: $font-size;
+    color: $color-light;
 }
 label.active {
-    top: -30px;
-    font-size: 13px;
+    top: -25px;
+    font-size: 14px;
     color: $color-accent;
 }
-// .ui-input:focus {
-//     border-bottom: 1px solid #1867c0;
-// }
+
 
 
 
@@ -83,15 +88,5 @@ NORMAL
 ----------------------------------------*/
 .ui-input--normal {
     border-bottom: 1px solid $color-light;
-}
-
-/*----------------------------------------
-PRIMARY 
-----------------------------------------*/
-.ui-input--primary {
-    border-bottom: 1px solid yellowgreen;
-}
-.ui-input--primary:focus {
-    border-bottom: 1px solid black;
 }
 </style>

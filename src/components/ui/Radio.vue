@@ -1,16 +1,16 @@
 <template>
     <label class="wrapper-radio">
-        <input type="radio" name="radio" :id="id">
-        <label :for="id" class="label"></label>
+        <input type="radio" name="radio">
+        <div class="label"></div>
         <slot></slot>
     </label>
 </template>
 
 <script>
 export default {
-    props: {
-        id: { type: String }
-    },
+    // props: {
+    //     id: { type: String }
+    // },
 }
 </script>
 

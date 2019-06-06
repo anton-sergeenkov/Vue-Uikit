@@ -6,14 +6,20 @@
         <!---------------------------------------->
 
         <h2>theme="normal | primary"</h2>
-        <ui-input theme="normal"></ui-input>
-        <ui-input theme="primary"></ui-input>
+        {{inputText}}
+        <ui-input theme="normal" v-model="inputText" placeholder="Typed..." autofocus></ui-input>
+        <ui-input theme="primary" placeholder="Typed..."></ui-input>
     </div>
 
 </template>
 
 <script>
 export default {
+    data() {
+        return {
+            inputText: ''
+        }
+    },
     methods: {
         handlerClick() {
             alert('ok');

@@ -2,10 +2,10 @@
     <div>
         <ul>
             <hr>
-            <li><a href="#ui-button">Button</a></li>
-            <li><a href="#ui-input">InputText</a></li>
+            <li><a href="#ui-radio">ui-input-radio</a></li>
+            <li><a href="#ui-input">ui-input-text</a></li>
+            <li><a href="#ui-button">ui-button</a></li>
             <li><a href="#ui-toast">Toast</a></li>
-            <li><a href="#ui-radio">Radio</a></li>
         </ul>
     </div>
 </template>

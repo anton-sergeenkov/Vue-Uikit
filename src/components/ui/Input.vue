@@ -2,9 +2,9 @@
     <div class="input-wrapper">
         <input 
             :class="classes" 
+            @input="$emit('input', $event.target.value)" 
             @focus="onFocus" 
             @blur="onBlur($event.target.value)" 
-            @input="$emit('input', $event.target.value)" 
             class="ui-input"
             type="text"
         >

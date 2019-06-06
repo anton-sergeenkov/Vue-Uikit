@@ -4,10 +4,11 @@
         <menu-container class="wrapper-menu" />
 
         <div class="wrapper-content">
-            <button-container id="ui-button" />
-            <input-container id="ui-input" />
-            <toast-container id="ui-toast" />
             <radio-container id="ui-radio" />
+            <input-container id="ui-input" />
+            <button-container id="ui-button" />
+            <toast-container id="ui-toast" />
+
         </div>
 
     </div>

@@ -36,8 +36,8 @@ export default {
 
 <style lang="scss">
 ::-webkit-scrollbar       { width: 7px; height: 7px;}
-::-webkit-scrollbar-thumb { height: 50px; background-color: rgba(170, 66, 244, 0.7); border-radius: 2px;}
-::-webkit-scrollbar-track { background-color: rgba(170, 66, 244, 0.2) }
+::-webkit-scrollbar-thumb { height: 50px; background-color: #b1b1b1; border-radius: 2px;}
+::-webkit-scrollbar-track { background-color: #f7f7f7 }
 
 * {
     box-sizing: border-box;
@@ -50,10 +50,11 @@ body {
 #app {
     display: flex;
 }
+
 h1 {
     width: 100%;
     font-size: 19px;
-    background: rgba(75,191,185, 1);
+    background: #2195f3;
     color: white;
     position: absolute;
     top: 0;
@@ -83,19 +84,6 @@ pre {
 		0 16px 24px 2px rgba(33,37,41,.02), 
 		0 6px 30px 5px rgba(33,37,41,.04), 
 		0 8px 10px -5px rgba(33,37,41,.1);
-}
-
-.wrapper-menu {
-    background: white;
-    width: 200px;
-	box-shadow:
-		0 16px 24px 2px rgba(33,37,41,.02), 
-		0 6px 30px 5px rgba(33,37,41,.04), 
-        0 8px 10px -5px rgba(33,37,41,.1);
-    height: 100vh;
-    overflow: auto;
-    background: white;
-    flex-shrink: 0;
 }
 .wrapper-content {
     margin-left: 20px;

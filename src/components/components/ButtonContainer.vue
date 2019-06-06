@@ -1,6 +1,6 @@
 <template>
     
-    <div class="wrapper">
+    <div class="wrapper-components">
         <!---------------------------------------->
         <h1>&lt;ui-button&gt;&lt;/ui-button&gt;</h1>
         <!---------------------------------------->

@@ -1,6 +1,6 @@
 <template>
     
-    <div class="wrapper">
+    <div class="wrapper-components">
         <!---------------------------------------->
         <h1>&lt;ui-input&gt;&lt;/ui-input&gt;</h1>
         <!---------------------------------------->

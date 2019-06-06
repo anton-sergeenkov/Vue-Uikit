@@ -1,6 +1,6 @@
 <template>
     
-    <div class="wrapper">
+    <div class="wrapper-components">
         <!---------------------------------------->
         <h1>&lt;ui-toast&gt;&lt;/ui-toast&gt;</h1>
         <!---------------------------------------->

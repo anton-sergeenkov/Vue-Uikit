@@ -1,31 +1,16 @@
 <template>
-    <div class="wrapper-radio">
-
-        <div class="radio">
-            <input type="radio" name="radio" id="radio1">
-            <label for="radio1"></label>
-        </div>
-
-        <div class="radio">
-            <input type="radio" name="radio" id="radio2">
-            <label for="radio2"></label>
-        </div>
-
-        <div class="radio">
-            <input type="radio" name="radio" id="radio3">
-            <label for="radio3"></label>
-        </div>
-
-    </div>
+    <label class="wrapper-radio">
+        <input type="radio" name="radio" :id="id">
+        <label :for="id" class="label"></label>
+        <slot></slot>
+    </label>
 </template>
 
 <script>
 export default {
-    // props: {
-    //     theme: { type: String, default: 'normal' },
-    //     size:  { type: String, default: 'sm' },
-    //     block: { type: Boolean }
-    // },
+    props: {
+        id: { type: String }
+    },
 }
 </script>
 
@@ -36,11 +21,12 @@ $width: 25px;
 
 .wrapper-radio {
     display: flex;
+    align-items: center;
 }
 input[type="radio"] {
     display: none;
 }
-input[type="radio"]:checked + label:after {
+input[type="radio"]:checked + .label:after {
     content: '';
     display: block;
     background: $c-primary;
@@ -48,10 +34,10 @@ input[type="radio"]:checked + label:after {
     height: $width / 1.75;
     border-radius: 50%;
 }
-input[type="radio"]:checked + label {
+input[type="radio"]:checked + .label {
     border: 2px solid $c-primary;
 }
-label {
+.label {
     width: $width;
     height: $width;
     border: 2px solid $c-dark;
@@ -60,6 +46,9 @@ label {
     justify-content: center;
     align-items: center;
     margin: 10px;
+    cursor: pointer;
+}
+label {
     cursor: pointer;
 }
 </style>

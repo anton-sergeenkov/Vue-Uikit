@@ -1,6 +1,13 @@
 <template>
     <div class="input-wrapper">
-        <input :class="classes" :value="value" @focus="onFocus" @blur="onBlur($event.target.value)" @input="$emit('input', $event.target.value)" class="ui-input">
+        <input 
+            :class="classes" 
+            @focus="onFocus" 
+            @blur="onBlur($event.target.value)" 
+            @input="$emit('input', $event.target.value)" 
+            class="ui-input"
+            type="text"
+        >
         <label :class="{ active:focused }" v-html="label"></label>
     </div>
 </template>
@@ -15,7 +22,6 @@ export default {
     props: {
         theme: { type: String, default: 'normal' },
         block: { type: Boolean },
-        value: { type: String },
         label: { type: String }
     },
     methods: {

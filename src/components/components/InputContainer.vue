@@ -6,8 +6,7 @@
         <!---------------------------------------->
 
         <h2>theme="normal | primary"</h2>
-        {{inputText}}
-        <ui-input theme="normal" v-model="inputText" placeholder="Typed..." autofocus></ui-input>
+        <ui-input type="text" theme="normal" v-model="inputText" placeholder="Typed..."></ui-input>
         <ui-input theme="primary" placeholder="Typed..."></ui-input>
     </div>
 
@@ -19,18 +18,13 @@ export default {
         return {
             inputText: ''
         }
-    },
-    methods: {
-        handlerClick() {
-            alert('ok');
-        }
     }
 }
 </script>
 
 <style>
 
-.ui-input {
-    margin: 10px;
+.input-wrapper {
+    margin: 30px 0px;
 }
 </style>

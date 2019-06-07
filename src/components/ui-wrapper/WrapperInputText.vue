@@ -2,14 +2,14 @@
     
     <div class="wrapper-components">
         <!---------------------------------------->
-        <h1>&lt;ui-input&gt;&lt;/ui-input&gt;</h1>
+        <h1>&lt;ui-input-text&gt;&lt;/ui-input-text&gt;</h1>
         <!---------------------------------------->
 
         <h2>theme="normal | primary" <span>{{inputName}}</span></h2> 
-        <ui-input theme="normal" label="Имя" v-model="inputName"></ui-input>
+        <ui-input-text theme="normal" label="Имя" v-model="inputName"></ui-input-text>
 
         <h2>label="Комментарий" <span>{{inputEmail}}</span></h2>
-        <ui-input theme="normal" label="E-mail" v-model="inputEmail"></ui-input>
+        <ui-input-text theme="normal" label="E-mail" v-model="inputEmail"></ui-input-text>
 
     </div>
 

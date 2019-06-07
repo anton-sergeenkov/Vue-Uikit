@@ -1,61 +1,66 @@
 <template>
-    <div id="app">
+    <div class="wrapper">
 
-        <menu-container class="wrapper-menu" />
+        <app-menu class="wrapper-menu"></app-menu>
 
         <div class="wrapper-content">
-            <radio-container id="ui-radio" />
-            <input-container id="ui-input" />
-            <button-container id="ui-button" />
-            <toast-container id="ui-toast" />
-
+            <ui-wrapper-input-radio id="ui-input-radio"/>
+            <ui-wrapper-input-text  id="ui-input-text" />
+            <ui-wrapper-button      id="ui-button" />
+            <ui-wrapper-toast       id="ui-toast" />
         </div>
 
     </div>
 </template>
 
 <script>
-import Menu from './components/pages/Menu.vue';
+import Menu from './components/components/Menu.vue';
 
-import ButtonContainer from './components/components/ButtonContainer.vue';
-import InputContainer from './components/components/InputContainer.vue';
-import ToastContainer from './components/components/ToastContainer.vue';
-import RadioContainer from './components/components/RadioContainer.vue';
+import WrapperButton     from './components/ui-wrapper/WrapperButton.vue';
+import WrapperInputRadio from './components/ui-wrapper/WrapperInputRadio.vue';
+import WrapperInputText  from './components/ui-wrapper/WrapperInputText.vue';
+import WrapperInputToast from './components/ui-wrapper/WrapperInputToast.vue';
 
 export default {
     components: {
-        'button-container': ButtonContainer,
-        'input-container': InputContainer,
-        'toast-container': ToastContainer,
-        'radio-container': RadioContainer,
-        'menu-container': Menu
+        'app-menu': Menu,
+
+        'ui-wrapper-button':      WrapperButton,
+        'ui-wrapper-input-radio': WrapperInputRadio,
+        'ui-wrapper-input-text':  WrapperInputText,
+        'ui-wrapper-toast':       WrapperInputToast
     }
 }
 </script>
 
-
 <style lang="scss">
-::-webkit-scrollbar       { width: 7px; height: 7px;}
-::-webkit-scrollbar-thumb { height: 50px; background-color: #b1b1b1; border-radius: 2px;}
-::-webkit-scrollbar-track { background-color: #f7f7f7 }
+:root {
+    --color-accent:  #2195f3;
+    --color-light:   #b1b1b1;
+    --color-lighter: #f7f7f7;
+    --box-shadow: 
+        0 16px 24px 2px rgba(33,37,41,.02), 
+        0 6px 30px 5px rgba(33,37,41,.04), 
+        0 8px 10px -5px rgba(33,37,41,.1);
+}
 
+::-webkit-scrollbar       { width: 7px; height: 7px;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: var(--color-light); border-radius: 2px;}
+::-webkit-scrollbar-track { background-color: var(--color-lighter) }
+ 
 * {
     box-sizing: border-box;
 }
 body {
     font-family: sans-serif;
     margin: 0;
-    background: #f8f9fa;
+    background: var(--color-lighter);
 }
-#app {
-    display: flex;
-}
-
 h1 {
     width: 100%;
     font-size: 19px;
-    background: #2195f3;
-    color: white;
+    background: var(--color-accent);
+    color: var(--color-lighter);
     position: absolute;
     top: 0;
     left: 0;
@@ -66,29 +71,32 @@ h2 {
     width: 100%;
     font-size: 17px;
 }
-pre {
-    background: #f5f5f5;
-    padding: 10px 40px 10px 0px;
-    font-size: 15px;
-}
-.wrapper-components {
-    max-width: 800px;
-    margin: 20px auto;
+.wrapper {
     display: flex;
-    flex-wrap: wrap;
-    padding: 45px 20px;
-    border-radius: .25rem;
-    position: relative;
-    background: #fff;
-	box-shadow:
-		0 16px 24px 2px rgba(33,37,41,.02), 
-		0 6px 30px 5px rgba(33,37,41,.04), 
-		0 8px 10px -5px rgba(33,37,41,.1);
-}
-.wrapper-content {
-    margin-left: 20px;
-    height: 100vh;
-    flex-grow: 1;
-    overflow: auto;
+    .wrapper-menu {
+        width: 200px;
+        height: 100vh;
+        flex-shrink: 0;
+        overflow: auto;
+        background: #fff;
+        box-shadow: var(--box-shadow);
+    }
+    .wrapper-content {
+        height: 100vh;
+        flex-grow: 1;
+        margin-left: 20px;
+        overflow: auto;
+    }
+    .wrapper-components {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 45px 20px;
+        border-radius: .25rem;
+        background: #fff;
+        box-shadow: var(--box-shadow);
+    }
 }
 </style>

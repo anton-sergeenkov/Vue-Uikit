@@ -6,4 +6,4 @@ import './components/ui';
 new Vue({
     el: '#app',
     render: h => h(App)
-})
+});

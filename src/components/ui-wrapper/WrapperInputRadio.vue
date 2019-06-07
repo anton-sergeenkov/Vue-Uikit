@@ -26,6 +26,9 @@ export default {
 <style>
 p {
     width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
 }
 .component-input-radio {
     margin: 20px 10px;

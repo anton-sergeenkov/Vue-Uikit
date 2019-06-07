@@ -1,14 +1,12 @@
 <template>
     <label class="component-ui-input-radio">
-
         <input 
-            :value="data"
-            :checked="checked"
             @input="$emit('input', $event.target.value)"
-            type="radio"
+            :value="data"
             :name="'radio'+group" 
+            :checked="checked"
+            type="radio"
         >
-
         <div class="icon"></div>
         <slot></slot>
     </label>
@@ -24,7 +22,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 $color-primary: #005caf;
 $color-dark: #444444;
 $size: 20px;
@@ -34,30 +32,29 @@ $size: 20px;
     align-items: center;
     cursor: pointer;
     user-select: none;
-
-    input[type="radio"] {
-        display: none;
-        &:checked + .icon:after {
-            content: '';
-            display: block;
-            width: $size / 2;
-            height: $size / 2;
-            background: $color-primary;
-            border-radius: 50%;
-        }
-        &:checked + .icon {
-            border: 2px solid $color-primary;
-        }
-    }
-    .icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: $size;
-        height: $size;
-        margin: 10px;
-        border: 2px solid $color-dark;
+}
+input[type="radio"] {
+    display: none;
+    &:checked + .icon:after {
+        content: '';
+        display: block;
+        width: $size / 2;
+        height: $size / 2;
+        background: $color-primary;
         border-radius: 50%;
     }
+    &:checked + .icon {
+        border: 2px solid $color-primary;
+    }
+}
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $size;
+    height: $size;
+    margin: 10px;
+    border: 2px solid $color-dark;
+    border-radius: 50%;
 }
 </style>

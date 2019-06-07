@@ -1,11 +1,11 @@
 <template>
-    <div class="input-wrapper">
+    <div class="component-ui-input-text">
         <input 
-            :class="classes" 
             @input="$emit('input', $event.target.value)" 
             @focus="onFocus" 
             @blur="onBlur($event.target.value)" 
-            class="ui-input"
+            :class="classes" 
+            class="input"
             type="text"
         >
         <label :class="{ active:focused }" v-html="label"></label>
@@ -21,7 +21,6 @@ export default {
     },
     props: {
         theme: { type: String, default: 'normal' },
-        block: { type: Boolean },
         label: { type: String }
     },
     methods: {
@@ -37,7 +36,7 @@ export default {
     computed: {
         classes() {
             return {
-                ['ui-input--'+this.theme]: true,
+                ['input--'+this.theme]: true,
                 ['active']: this.focused
             };
         }
@@ -45,54 +44,47 @@ export default {
 }
 </script>
 
-<style scoped scoped lang="scss">
+<style scoped lang="scss">
 $color-light: #747474;
-$font-size: 15px;
 $color-accent: #1867c0;
+$font-size: 15px;
 $padding: 10px 10px 10px 5px;
 
-.ui-input {
+.component-ui-input-text {
+    position: relative;
+    width: 100%;
+}
+.input {
+    position: relative;
+    z-index: 1;
     width: 100%; 
     padding: $padding;
     border: none;
-    border-radius: 2px;
+    outline: none;
     font-family: inherit;
     font-size: $font-size;
-    outline: none;
-    z-index: 1;
-    position: relative;
     background: none;
-}
-.ui-input.active {
-    border-bottom: 1px solid $color-accent;
-}
-.input-wrapper {
-    width: 100%;
-    position: relative;
+    &.active {
+        border-bottom: 1px solid $color-accent;
+    }
 }
 label {
     position: absolute;
+    z-index: 0;
     top: 0;
     left: 0;
     padding: $padding;
-    transition: 0.4s;
-    z-index: 0;
     font-size: $font-size;
     color: $color-light;
+    transition: 0.4s;
+    &.active {
+        top: -25px;
+        font-size: 14px;
+        color: $color-accent;
+    }
 }
-label.active {
-    top: -25px;
-    font-size: 14px;
-    color: $color-accent;
-}
 
-
-
-
-/*----------------------------------------
-NORMAL 
-----------------------------------------*/
-.ui-input--normal {
+.input--normal {
     border-bottom: 1px solid $color-light;
 }
 </style>

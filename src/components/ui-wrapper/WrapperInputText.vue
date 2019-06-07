@@ -1,12 +1,9 @@
 <template>
-    
     <div class="wrapper-components">
-        <!---------------------------------------->
-        <h1>&lt;ui-input-text&gt;&lt;/ui-input-text&gt;</h1>
-        <!---------------------------------------->
+        <h1>&lt;ui-input-text /&gt;</h1>
 
-        <ui-input-text theme="normal" label="Имя" v-model="inputName"></ui-input-text>
-        <ui-input-text theme="normal" label="E-mail" v-model="inputEmail"></ui-input-text>
+        <ui-input-text v-model="inputName" theme="normal" label="Имя" />
+        <ui-input-text v-model="inputEmail" theme="normal" label="E-mail" />
 
         <h3>Result: {{inputName}} {{inputEmail}}</h3>
 
@@ -15,7 +12,6 @@
             label="Комментарий"
         </h2> 
     </div>
-
 </template>
 
 <script>
@@ -30,11 +26,7 @@ export default {
 </script>
 
 <style>
-.input-wrapper {
+.component-ui-input-text {
     margin: 20px 0px;
-}
-h2 span {
-    color: grey;
-    font-weight: normal;
 }
 </style>

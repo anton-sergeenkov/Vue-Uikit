@@ -1,15 +1,15 @@
 <template>
-    <label class="component-input-radio">
+    <label class="component-ui-input-radio">
 
         <input 
             :value="data"
             :checked="checked"
             @input="$emit('input', $event.target.value)"
             type="radio"
-            name="radio" 
+            :name="'radio'+group" 
         >
 
-        <div class="label"></div>
+        <div class="icon"></div>
         <slot></slot>
     </label>
 </template>
@@ -17,18 +17,19 @@
 <script>
 export default {
     props: {
-        data: { type: String },
+        data:    { type: String },
+        group:   { type: String },
         checked: { type: Boolean }
     }
 }
 </script>
 
 <style lang="scss">
-$c-primary: #005caf;
-$c-dark: #444444;
-$width: 20px;
+$color-primary: #005caf;
+$color-dark: #444444;
+$size: 20px;
 
-.component-input-radio {
+.component-ui-input-radio {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -36,35 +37,27 @@ $width: 20px;
 
     input[type="radio"] {
         display: none;
-        &:checked + .label:after {
+        &:checked + .icon:after {
             content: '';
             display: block;
-            background: $c-primary;
-            width: $width / 2;
-            height: $width / 2;
+            width: $size / 2;
+            height: $size / 2;
+            background: $color-primary;
             border-radius: 50%;
         }
-        &:checked + .label {
-            border: 2px solid $c-primary;
+        &:checked + .icon {
+            border: 2px solid $color-primary;
         }
     }
-
-    .label {
-        width: $width;
-        height: $width;
-        border: 2px solid $c-dark;
-        border-radius: 50%;
+    .icon {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: $size;
+        height: $size;
         margin: 10px;
-        cursor: pointer;
+        border: 2px solid $color-dark;
+        border-radius: 50%;
     }
-    label {
-        cursor: pointer;
-        border: 2px solid #000;
-    }
-
 }
-
 </style>

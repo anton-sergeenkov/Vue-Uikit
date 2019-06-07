@@ -73,12 +73,20 @@ h1 {
 h2 {
     width: 100%;
     padding: 15px;
-    background: rgba(179, 183, 104, 0.2);
+    background: rgba(179, 183, 104, 0.15);
     color: var(--color-orange);
     font-family: monospace;
-    font-size: 16px; 
+    font-size: 15px; 
     font-weight: normal;
     line-height: 1.7;
+}
+h3 {
+    width: 100%;
+    margin: 10px 0px;
+    padding: 0;
+    color: var(--color-light);
+    font-size: 16px;
+    font-weight: normal;
 }
 .wrapper {
     display: flex;
@@ -102,7 +110,7 @@ h2 {
         position: relative;
         max-width: 800px;
         margin: 20px 0px;
-        padding: 65px 20px;
+        padding: 55px 20px 20px 20px;
         border-radius: .25rem;
         background: #fff;
         box-shadow: var(--box-shadow);

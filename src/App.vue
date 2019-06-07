@@ -4,10 +4,11 @@
         <app-menu class="wrapper-menu"></app-menu>
 
         <div class="wrapper-content">
-            <ui-wrapper-input-radio id="ui-input-radio"/>
-            <ui-wrapper-input-text  id="ui-input-text" />
-            <ui-wrapper-button      id="ui-button" />
-            <ui-wrapper-toast       id="ui-toast" />
+            <ui-wrapper-input-radio    id="ui-input-radio"/>
+            <ui-wrapper-input-checkbox id="ui-input-checkbox" />
+            <ui-wrapper-input-text     id="ui-input-text" />
+            <ui-wrapper-button         id="ui-button" />
+            <ui-wrapper-toast          id="ui-toast" />
         </div>
 
     </div>
@@ -16,19 +17,21 @@
 <script>
 import Menu from './components/components/Menu.vue';
 
-import WrapperButton     from './components/ui-wrapper/WrapperButton.vue';
-import WrapperInputRadio from './components/ui-wrapper/WrapperInputRadio.vue';
-import WrapperInputText  from './components/ui-wrapper/WrapperInputText.vue';
-import WrapperInputToast from './components/ui-wrapper/WrapperInputToast.vue';
+import WrapperButton        from './components/ui-wrapper/WrapperButton.vue';
+import WrapperInputRadio    from './components/ui-wrapper/WrapperInputRadio.vue';
+import WrapperInputCheckbox from './components/ui-wrapper/WrapperInputCheckbox.vue';
+import WrapperInputText     from './components/ui-wrapper/WrapperInputText.vue';
+import WrapperInputToast    from './components/ui-wrapper/WrapperInputToast.vue';
 
 export default {
     components: {
         'app-menu': Menu,
 
-        'ui-wrapper-button':      WrapperButton,
-        'ui-wrapper-input-radio': WrapperInputRadio,
-        'ui-wrapper-input-text':  WrapperInputText,
-        'ui-wrapper-toast':       WrapperInputToast
+        'ui-wrapper-button':         WrapperButton,
+        'ui-wrapper-input-radio':    WrapperInputRadio,
+        'ui-wrapper-input-checkbox': WrapperInputCheckbox,
+        'ui-wrapper-input-text':     WrapperInputText,
+        'ui-wrapper-toast':          WrapperInputToast
     }
 }
 </script>
@@ -73,8 +76,8 @@ h1 {
 h2 {
     width: 100%;
     padding: 15px;
-    background: rgba(179, 183, 104, 0.15);
-    color: var(--color-orange);
+    background: #f8f8f8;
+    color: #2973b7;
     font-family: monospace;
     font-size: 15px; 
     font-weight: normal;
@@ -91,7 +94,7 @@ h3 {
 .wrapper {
     display: flex;
     .wrapper-menu {
-        width: 200px;
+        width: 230px;
         height: 100vh;
         flex-shrink: 0;
         overflow: auto;

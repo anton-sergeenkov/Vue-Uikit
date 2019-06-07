@@ -58,18 +58,30 @@ body {
 }
 h1 {
     width: 100%;
-    font-size: 19px;
     background: var(--color-accent);
-    color: var(--color-lighter);
+    color: #fff;
     position: absolute;
     top: 0;
     left: 0;
     margin: 0;
-    padding: 10px;
+
+    font-family: monospace;
+    padding: 15px;
+    font-size: 17px;
 }
 h2 {
     width: 100%;
     font-size: 17px;
+    color: #707070;
+    font-weight: normal;
+    line-height: 1.7;
+
+	font-family: monospace;
+	color: #e96900;
+	padding: 15px;
+	background: rgba(179, 183, 104, 0.2);
+    font-size: 16px;
+    
 }
 .wrapper {
     display: flex;
@@ -84,7 +96,7 @@ h2 {
     .wrapper-content {
         height: 100vh;
         flex-grow: 1;
-        margin-left: 20px;
+        margin-left: 35px;
         overflow: auto;
     }
     .wrapper-components {
@@ -92,8 +104,8 @@ h2 {
         flex-wrap: wrap;
         position: relative;
         max-width: 800px;
-        margin: 20px auto;
-        padding: 45px 20px;
+        margin: 20px 0px;
+        padding: 65px 20px;
         border-radius: .25rem;
         background: #fff;
         box-shadow: var(--box-shadow);

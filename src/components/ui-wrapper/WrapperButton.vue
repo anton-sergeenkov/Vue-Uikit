@@ -1,9 +1,7 @@
 <template>
     
     <div class="wrapper-components">
-        <!---------------------------------------->
         <h1>&lt;ui-button&gt;&lt;/ui-button&gt;</h1>
-        <!---------------------------------------->
 
         <h2>theme="normal | primary"</h2>
         <ui-button theme="normal" @click.native="handlerClick">normal</ui-button>

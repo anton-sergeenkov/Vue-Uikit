@@ -38,6 +38,7 @@ export default {
     --color-accent:  #2195f3;
     --color-light:   #b1b1b1;
     --color-lighter: #f7f7f7;
+    --color-orange:  #e96900;
     --box-shadow: 
         0 16px 24px 2px rgba(33,37,41,.02), 
         0 6px 30px 5px rgba(33,37,41,.04), 
@@ -52,36 +53,31 @@ export default {
     box-sizing: border-box;
 }
 body {
-    font-family: sans-serif;
     margin: 0;
     background: var(--color-lighter);
+    font-family: sans-serif;
 }
 h1 {
-    width: 100%;
-    background: var(--color-accent);
-    color: #fff;
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
     margin: 0;
-
-    font-family: monospace;
     padding: 15px;
+    background: var(--color-accent);
+    color: #fff;
     font-size: 17px;
+    font-family: monospace;
 }
 h2 {
     width: 100%;
-    font-size: 17px;
-    color: #707070;
+    padding: 15px;
+    background: rgba(179, 183, 104, 0.2);
+    color: var(--color-orange);
+    font-family: monospace;
+    font-size: 16px; 
     font-weight: normal;
     line-height: 1.7;
-
-	font-family: monospace;
-	color: #e96900;
-	padding: 15px;
-	background: rgba(179, 183, 104, 0.2);
-    font-size: 16px;
-    
 }
 .wrapper {
     display: flex;

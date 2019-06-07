@@ -2,7 +2,7 @@
     <label class="component-input-radio">
 
         <input 
-            :value="content"
+            :value="data"
             :checked="checked"
             @input="$emit('input', $event.target.value)"
             type="radio"
@@ -17,7 +17,7 @@
 <script>
 export default {
     props: {
-        content: { type: String },
+        data: { type: String },
         checked: { type: Boolean }
     }
 }
@@ -31,21 +31,23 @@ $width: 20px;
 .component-input-radio {
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     input[type="radio"] {
         display: none;
+        &:checked + .label:after {
+            content: '';
+            display: block;
+            background: $c-primary;
+            width: $width / 2;
+            height: $width / 2;
+            border-radius: 50%;
+        }
+        &:checked + .label {
+            border: 2px solid $c-primary;
+        }
     }
-    input[type="radio"]:checked + .label:after {
-        content: '';
-        display: block;
-        background: $c-primary;
-        width: $width / 2;
-        height: $width / 2;
-        border-radius: 50%;
-    }
-    input[type="radio"]:checked + .label {
-        border: 2px solid $c-primary;
-    }
+
     .label {
         width: $width;
         height: $width;
@@ -59,6 +61,7 @@ $width: 20px;
     }
     label {
         cursor: pointer;
+        border: 2px solid #000;
     }
 
 }

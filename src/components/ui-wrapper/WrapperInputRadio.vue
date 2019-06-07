@@ -4,9 +4,9 @@
         <!---------------------------------------->
         <h1>&lt;ui-input-radio&gt;&lt;/ui-input-radio&gt;</h1>
         <!---------------------------------------->
-        <ui-input-radio v-model="picked" content="Radio-1" checked>Label-1</ui-input-radio>
-        <ui-input-radio v-model="picked" content="Radio-2">Label-2</ui-input-radio>
-        <ui-input-radio v-model="picked" content="Radio-3">Label-3</ui-input-radio>
+        <ui-input-radio v-model="picked" data="Radio-1" checked>Label-1</ui-input-radio>
+        <ui-input-radio v-model="picked" data="Radio-2">Label-2</ui-input-radio>
+        <ui-input-radio v-model="picked" data="Radio-3">Label-3</ui-input-radio>
 
         <p>Выбрано: {{ picked }}</p>
     </div>

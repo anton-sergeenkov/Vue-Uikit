@@ -2,7 +2,7 @@
     
     <div class="wrapper-components">
         <!---------------------------------------->
-        <h1>&lt;ui-toast&gt;&lt;/ui-toast&gt;</h1>
+        <h1>&lt;ui-toast&gt;&lt;/ui-toast&gt; --^--</h1>
         <!---------------------------------------->
 
         <h2>theme="primary | success | info | warning | error"</h2>

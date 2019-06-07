@@ -68,6 +68,7 @@ h1 {
     color: #fff;
     font-size: 17px;
     font-family: monospace;
+    font-weight: normal;
 }
 h2 {
     width: 100%;

@@ -32,6 +32,7 @@ $width: 20px;
     display: flex;
     align-items: center;
     cursor: pointer;
+    user-select: none;
 
     input[type="radio"] {
         display: none;

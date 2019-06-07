@@ -1,5 +1,5 @@
 <template>
-    <button :class="classes" class="ui-btn">
+    <button :class="classes" class="component-ui-button">
         <slot></slot>
     </button>
 </template>
@@ -13,10 +13,11 @@ export default {
     },
     computed: {
         classes() {
+            let name = 'component-ui-button--';
             return {
-                ['ui-btn--'+this.size]: true, 
-                ['ui-btn--'+this.theme]: true,
-                'ui-btn--block': this.block
+                [name+this.size]: true, 
+                [name+this.theme]: true,
+                [name+'block']: this.block
             };
         }
     }
@@ -24,40 +25,44 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$c-normal: #f5f5f5;
-$c-primary: #2195f3;
+$color-normal: #f5f5f5;
+$color-primary: #2195f3;
+$box-shadow: 
+    0px 3px 1px -2px rgba(0,0,0,0.2), 
+    0px 2px 2px 0px rgba(0,0,0,0.14), 
+    0px 1px 5px 0px rgba(0,0,0,0.12);
 
-.ui-btn {
+.component-ui-button {
+    display: block;
     padding: 13px 20px;
-    border-radius: 3px;
-    cursor: pointer;
     border: none;
     outline: none;
     background: none;
-    font-family: inherit;
-    display: block;
-    transition: 0.4s;
     color: #000;
+    border-radius: 3px;
+    font-family: inherit;
     text-decoration: none;
     text-transform: uppercase;
-    box-shadow: 
-        0px 3px 1px -2px rgba(0,0,0,0.2), 
-        0px 2px 2px 0px rgba(0,0,0,0.14), 
-        0px 1px 5px 0px rgba(0,0,0,0.12);
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
-.ui-btn--xs    { font-size: 10px; }
-.ui-btn--sm    { font-size: 14px; }
-.ui-btn--md    { font-size: 17px; }
-.ui-btn--lg    { font-size: 20px; }
-
-.ui-btn--block { width: 100%; }
-
-.ui-btn--normal {
-    background-color: $c-normal;
+.component-ui-button-- {
+    &xs    { font-size: 10px; }
+    &sm    { font-size: 14px; }
+    &md    { font-size: 17px; }
+    &lg    { font-size: 20px; }
+    &block { width: 100%; }
 }
-.ui-btn--primary {
-    background-color: $c-primary;
-    color: #fff;
+
+.component-ui-button-- {
+    &normal {
+        background-color: $color-normal;
+    }
+    &primary {
+        background-color: $color-primary;
+        color: #fff;
+    }
 }
 </style>

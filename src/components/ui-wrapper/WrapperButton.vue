@@ -1,5 +1,4 @@
 <template>
-    
     <div class="wrapper-components">
         <h1>&lt;ui-button&gt;&lt;/ui-button&gt;</h1>
 
@@ -16,7 +15,6 @@
         <h2>block</h2>
         <ui-button block>block</ui-button>
     </div>
-
 </template>
 
 <script>
@@ -30,7 +28,7 @@ export default {
 </script>
 
 <style>
-.ui-btn {
+.component-ui-button {
     margin: 10px;
 }
 </style>

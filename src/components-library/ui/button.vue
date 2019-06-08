@@ -62,11 +62,10 @@ $box-shadow:
     &.orange     { @include setColor($orange,     #fff); }
     &.silver     { @include setColor($light,      #000); }
 
-    &xs    { font-size: 10px; }
-    &sm    { font-size: 14px; }
-    &md    { font-size: 17px; }
-    &lg    { font-size: 20px; }
-    &block { width: 100%; }
+    &.xs    { font-size: 10px; }
+    &.sm    { font-size: 14px; }
+    &.md    { font-size: 17px; }
+    &.lg    { font-size: 20px; }
+    &.block { width: 100%; }
 }
-
 </style>

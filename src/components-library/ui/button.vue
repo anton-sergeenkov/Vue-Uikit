@@ -1,6 +1,6 @@
 <template>
     <button :class="classes" class="component-ui-button">
-        <slot></slot>
+        {{label}}
     </button>
 </template>
 
@@ -9,6 +9,7 @@ export default {
     props: {
         theme: { type: String, default: 'normal' },
         size:  { type: String, default: 'sm' },
+        label: { type: String },
         block: { type: Boolean }
     },
     computed: {
@@ -59,12 +60,7 @@ $box-shadow:
 }
 
 .component-ui-button-- {
-    &normal {
-        background-color: $color-normal;
-    }
-    &primary {
-        background-color: $color-primary;
-        color: #fff;
-    }
+    &normal { background-color: $color-normal; }
+    &primary { background-color: $color-primary; color: #fff; }
 }
 </style>

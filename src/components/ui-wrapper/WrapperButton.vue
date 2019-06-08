@@ -2,18 +2,21 @@
     <div class="wrapper-components">
         <h1>&lt;ui-button&gt;&lt;/ui-button&gt;</h1>
 
-        <h2>theme="normal | primary"</h2>
-        <ui-button theme="normal" @click.native="handlerClick">normal</ui-button>
-        <ui-button theme="primary">primary</ui-button>
+        <h2>
+            label="" <br>
+            theme="normal | primary"
+        </h2>
+        <ui-button theme="normal" @click.native="handlerClick" label="normal" />
+        <ui-button theme="primary" label="primary" />
 
         <h2>size="xs | sm | md | lg"</h2>
-        <ui-button size="xs">xs</ui-button>
-        <ui-button size="sm">sm</ui-button>
-        <ui-button size="md">md</ui-button>
-        <ui-button size="lg">lg</ui-button>
+        <ui-button size="xs" label="xs" />
+        <ui-button size="sm" label="sm" />
+        <ui-button size="md" label="md" />
+        <ui-button size="lg" label="lg" />
 
         <h2>block</h2>
-        <ui-button block>block</ui-button>
+        <ui-button block label="block" />
     </div>
 </template>
 

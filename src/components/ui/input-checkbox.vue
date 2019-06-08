@@ -1,17 +1,34 @@
 <template>
-    <div>
-        <input 
-            @input="$emit('input', $event.target.value)"
-            :value="data"
-            type="checkbox"
-        >
+    <div class="my-check-box">
+        <label>
+            <input type="checkbox" :value="data" v-model="checked" @change="onChange" />
+            {{label}}
+        </label>
     </div>
 </template>
 
 <script>
 export default {
-    props: {
-        data: { type: String }
+    props: ['value', 'data', 'label'],
+    data () {
+        return {
+            checkedProxy: false
+        }
+    },
+    computed: {
+        checked: {
+            get() {
+                return this.value;
+            },
+            set(data) {
+                this.checkedProxy = data;
+            }
+        }
+    },
+    methods: {
+        onChange: function(e) {
+            this.$emit('input', this.checkedProxy);
+        }
     }
 }
 </script>

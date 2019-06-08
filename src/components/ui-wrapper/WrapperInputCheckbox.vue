@@ -2,15 +2,15 @@
     <div class="wrapper-components">
         <h1>&lt;ui-input-checkbox /&gt;</h1>
 
-        <ui-input-checkbox v-model="checkedNames" val="item1" label="Item 1" />
-        <ui-input-checkbox v-model="checkedNames" val="item2" label="Item 2" />
-        <ui-input-checkbox v-model="checkedNames" val="item3" label="Item 3" />
+        <ui-input-checkbox v-model="picked" val="item1" label="Item 1" checked />
+        <ui-input-checkbox v-model="picked" val="item2" label="Item 2" />
+        <ui-input-checkbox v-model="picked" val="item3" label="Item 3" />
 
-        <h3>Result: {{ checkedNames }}</h3>
+        <h3>Result: {{ picked }}</h3>
 
         <h2>
-            data="" <br>
-            group="" <br>
+            val="" <br>
+            label="" <br>
             checked
         </h2>
     </div>
@@ -20,7 +20,7 @@
 export default {
     data() {
         return {
-            checkedNames: []
+            picked: []
         }
     }
 }

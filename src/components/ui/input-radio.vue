@@ -2,20 +2,21 @@
     <label class="component-ui-input-radio">
         <input 
             @input="$emit('input', $event.target.value)"
-            :value="data"
+            :value="val"
             :name="'radio'+group" 
             :checked="checked"
             type="radio"
         >
         <div class="icon"></div>
-        <slot></slot>
+        {{label}}
     </label>
 </template>
 
 <script>
 export default {
     props: {
-        data:    { type: String },
+        val:     { type: String },
+        label:   { type: String },
         group:   { type: String },
         checked: { type: Boolean }
     }

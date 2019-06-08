@@ -9,7 +9,12 @@
 
 <script>
 export default {
-    props: ['value', 'val', 'label'],
+    props: {
+        value:   { type: String },
+        val:     { type: String },
+        label:   { type: String },
+        checked: { type: Boolean }
+    },
     data () {
         return {
             checkedProxy: false

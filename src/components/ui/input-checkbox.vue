@@ -1,7 +1,7 @@
 <template>
     <div class="my-check-box">
         <label>
-            <input type="checkbox" :value="data" v-model="checked" @change="onChange" />
+            <input type="checkbox" :value="val" v-model="checked" @change="onChange" />
             {{label}}
         </label>
     </div>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    props: ['value', 'data', 'label'],
+    props: ['value', 'val', 'label'],
     data () {
         return {
             checkedProxy: false
@@ -20,8 +20,8 @@ export default {
             get() {
                 return this.value;
             },
-            set(data) {
-                this.checkedProxy = data;
+            set(val) {
+                this.checkedProxy = val;
             }
         }
     },

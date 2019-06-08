@@ -39,7 +39,7 @@ export default {
 
 <style scoped lang="scss">
 $color-primary: #005caf;
-$color-dark: #444444;
+$color-dark: #727272;
 $size: 20px;
 
 .component-ui-input-checkbox {
@@ -51,15 +51,18 @@ $size: 20px;
 input[type="checkbox"] {
     display: none;
     &:checked + .icon:after {
-        content: '';
-        display: block;
+        content: '✔';
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: $size / 2;
         height: $size / 2;
-        background: $color-primary;
-        border-radius: 50%;
+        color: #fff;
+        font-size: 13px;
     }
     &:checked + .icon {
         border: 2px solid $color-primary;
+        background: $color-primary;
     }
 }
 .icon {
@@ -70,6 +73,6 @@ input[type="checkbox"] {
     height: $size;
     margin: 10px;
     border: 2px solid $color-dark;
-    border-radius: 50%;
+    border-radius: 3px;
 }
 </style>

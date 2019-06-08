@@ -19,7 +19,7 @@ export default {
 
 <style scoped lang="scss">
 $color-primary: #005caf;
-$color-dark: #444444;
+$color-dark: #727272;
 $size: 20px;
 
 .component-ui-input-radio {

@@ -4,7 +4,7 @@
 
         <ui-input-radio v-model="picked" val="item1" label="Item 1" group="1" color="blue-light" />
         <ui-input-radio v-model="picked" val="item2" label="Item 2" group="1" color="orange" />
-        <ui-input-radio v-model="picked" val="item3" label="Item 3" group="1" color="green" />
+        <ui-input-radio v-model="picked" val="item3" label="Item 3" group="1" />
 
         <h3>Result: {{ picked }}</h3>
 

@@ -7,18 +7,17 @@
 <script>
 export default {
     props: {
-        theme: { type: String, default: 'normal' },
+        color: { type: String, default: 'silver' },
         size:  { type: String, default: 'sm' },
         label: { type: String },
         block: { type: Boolean }
     },
     computed: {
         classes() {
-            let name = 'component-ui-button--';
             return {
-                [name+this.size]: true, 
-                [name+this.theme]: true,
-                [name+'block']: this.block
+                [this.size]: true, 
+                [this.color]: true,
+                ['block']: this.block
             };
         }
     }
@@ -28,8 +27,6 @@ export default {
 <style scoped lang="scss">
 @import './styles.scss';
 
-$color-normal: #f5f5f5;
-$color-primary: #2195f3;
 $box-shadow: 
     0px 3px 1px -2px rgba(0,0,0,0.2), 
     0px 2px 2px 0px rgba(0,0,0,0.14), 
@@ -51,7 +48,20 @@ $box-shadow:
     transition: 0.4s;
 }
 
-.component-ui-button-- {
+@mixin setColor($bg-color, $color) {
+    background-color: $bg-color; 
+    color: $color;
+}
+
+.component-ui-button {
+    &.indigo     { @include setColor($indigo,     #fff); }
+    &.blue       { @include setColor($blue,       #fff); }
+    &.blue-light { @include setColor($blue-light, #fff); }
+    &.green      { @include setColor($green,      #fff); }
+    &.red        { @include setColor($red,        #fff); }
+    &.orange     { @include setColor($orange,     #fff); }
+    &.silver     { @include setColor($light,      #000); }
+
     &xs    { font-size: 10px; }
     &sm    { font-size: 14px; }
     &md    { font-size: 17px; }
@@ -59,8 +69,4 @@ $box-shadow:
     &block { width: 100%; }
 }
 
-.component-ui-button-- {
-    &normal { background-color: $color-normal; }
-    &primary { background-color: $color-primary; color: #fff; }
-}
 </style>

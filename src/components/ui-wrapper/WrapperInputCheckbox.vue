@@ -4,7 +4,7 @@
 
         <ui-input-checkbox v-model="picked" val="item1" label="Item 1" color="blue-light" />
         <ui-input-checkbox v-model="picked" val="item2" label="Item 2" color="orange" />
-        <ui-input-checkbox v-model="picked" val="item3" label="Item 3" color="green" />
+        <ui-input-checkbox v-model="picked" val="item3" label="Item 3" />
 
         <h3>Result: {{ picked }}</h3>
 

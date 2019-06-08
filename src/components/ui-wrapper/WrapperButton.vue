@@ -4,10 +4,15 @@
 
         <h2>
             label="" <br>
-            theme="normal | primary"
+            color="indigo | blue | blue-light | green | red | orange | silver"
         </h2>
-        <ui-button theme="normal" @click.native="handlerClick" label="normal" />
-        <ui-button theme="primary" label="primary" />
+        <ui-button @click.native="handlerClick" label="silver" />
+        <ui-button color="indigo" label="indigo" />
+        <ui-button color="blue" label="blue" />
+        <ui-button color="blue-light" label="blue-light" />
+        <ui-button color="green" label="green" />
+        <ui-button color="red" label="red" />
+        <ui-button color="orange" label="orange" />
 
         <h2>size="xs | sm | md | lg"</h2>
         <ui-button size="xs" label="xs" />

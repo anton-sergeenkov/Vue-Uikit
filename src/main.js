@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
 
-import './components/ui';
+import './components-library/ui';
 
 new Vue({
     el: '#app',

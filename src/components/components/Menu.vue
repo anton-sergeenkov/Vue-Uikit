@@ -10,7 +10,6 @@
     </ul>
 </template>
 
-
 <style scoped>
 ul {
     margin: 0;

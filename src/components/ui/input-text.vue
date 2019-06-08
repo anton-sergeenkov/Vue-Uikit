@@ -72,10 +72,6 @@ $padding: 10px 10px 10px 5px;
     &.silver     { @include setColor($silver);     }
 }
 
-
-
-
-
 .component-ui-input-text {
     position: relative;
     width: 100%;

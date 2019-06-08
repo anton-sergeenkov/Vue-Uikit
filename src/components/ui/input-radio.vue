@@ -1,12 +1,12 @@
 <template>
-    <label class="component-ui-input-radio">
+    <label :class="classes" class="component-ui-input-radio">
         <input 
             @input="$emit('input', $event.target.value)"
             :value="val"
             :name="'radio'+group" 
             type="radio"
         />
-        <div :class="classes" class="icon"></div>
+        <div class="icon"></div>
         {{label}}
     </label>
 </template>
@@ -32,8 +32,27 @@ export default {
 <style scoped lang="scss">
 @import './styles.scss';
 
-$color-primary: #005caf;
 $size: 20px;
+
+@mixin setColor($color) {
+    input[type="radio"] {
+        &:checked + .icon:after {
+            background: $color;
+        }
+        &:checked + .icon {
+            border: 2px solid $color;
+        }
+    }
+}
+.component-ui-input-radio {
+    &.indigo     { @include setColor($indigo);     }
+    &.blue       { @include setColor($blue);       }
+    &.blue-light { @include setColor($blue-light); }
+    &.green      { @include setColor($green);      }
+    &.red        { @include setColor($red);        }
+    &.orange     { @include setColor($orange);     }
+    &.silver     { @include setColor($silver);     }
+}
 
 .component-ui-input-radio {
     display: flex;
@@ -48,26 +67,9 @@ input[type="radio"] {
         display: block;
         width: $size / 2;
         height: $size / 2;
-        background: $color-primary;
         border-radius: 50%;
     }
-    &:checked + .icon {
-        border: 2px solid $color-primary;
-    }
 }
-
-
-// input[type="radio"] {
-//     &:checked + .icon:after {
-//         background: $color-primary;
-//     }
-//     &:checked + .icon {
-//         border: 2px solid $color-primary;
-//     }
-// }
-
-
-
 .icon {
     display: flex;
     justify-content: center;

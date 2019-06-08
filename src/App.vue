@@ -4,10 +4,10 @@
         <app-menu class="wrapper-menu"></app-menu>
 
         <div class="wrapper-content">
+            <ui-wrapper-button         id="ui-button" />
             <ui-wrapper-input-radio    id="ui-input-radio"/>
             <ui-wrapper-input-checkbox id="ui-input-checkbox" />
             <ui-wrapper-input-text     id="ui-input-text" />
-            <ui-wrapper-button         id="ui-button" />
             <ui-wrapper-toast          id="ui-toast" />
         </div>
 

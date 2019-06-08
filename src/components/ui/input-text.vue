@@ -1,5 +1,5 @@
 <template>
-    <div class="component-ui-input-text">
+    <div class="component-ui-input-text" :class="classesColor">
         <input 
             @input="$emit('input', $event.target.value)" 
             @focus="onFocus" 
@@ -20,7 +20,7 @@ export default {
         }
     },
     props: {
-        theme: { type: String, default: 'normal' },
+        color: { type: String, default: 'silver' },
         label: { type: String }
     },
     methods: {
@@ -36,8 +36,12 @@ export default {
     computed: {
         classes() {
             return {
-                ['input--'+this.theme]: true,
                 ['active']: this.focused
+            };
+        },
+        classesColor() {
+            return {
+                [this.color]: true
             };
         }
     }
@@ -47,10 +51,30 @@ export default {
 <style scoped lang="scss">
 @import './styles.scss';
 
-$color-light: #747474;
-$color-accent: #1867c0;
 $font-size: 15px;
 $padding: 10px 10px 10px 5px;
+
+@mixin setColor($color) {
+    .input.active {
+        border-bottom: 1px solid $color;
+    } 
+    label.active {
+        color: $color;
+    }
+}
+.component-ui-input-text {
+    &.indigo     { @include setColor($indigo);     }
+    &.blue       { @include setColor($blue);       }
+    &.blue-light { @include setColor($blue-light); }
+    &.green      { @include setColor($green);      }
+    &.red        { @include setColor($red);        }
+    &.orange     { @include setColor($orange);     }
+    &.silver     { @include setColor($silver);     }
+}
+
+
+
+
 
 .component-ui-input-text {
     position: relative;
@@ -66,9 +90,7 @@ $padding: 10px 10px 10px 5px;
     font-family: inherit;
     font-size: $font-size;
     background: none;
-    &.active {
-        border-bottom: 1px solid $color-accent;
-    }
+    border-bottom: 1px solid $gray;
 }
 label {
     position: absolute;
@@ -77,16 +99,11 @@ label {
     left: 0;
     padding: $padding;
     font-size: $font-size;
-    color: $color-light;
+    color: $gray;
     transition: 0.4s;
     &.active {
         top: -25px;
         font-size: 14px;
-        color: $color-accent;
     }
-}
-
-.input--normal {
-    border-bottom: 1px solid $color-light;
 }
 </style>

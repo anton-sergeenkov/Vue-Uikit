@@ -76,13 +76,13 @@ input[type="checkbox"] {
         font-size: 13px;
     }
     &:checked + .icon {
-        &.indigo     { @include setColor($indigo); }
-        &.blue       { @include setColor($blue); }
+        &.indigo     { @include setColor($indigo);     }
+        &.blue       { @include setColor($blue);       }
         &.blue-light { @include setColor($blue-light); }
-        &.green      { @include setColor($green); }
-        &.red        { @include setColor($red); }
-        &.orange     { @include setColor($orange); }
-        &.silver     { @include setColor($silver); }
+        &.green      { @include setColor($green);      }
+        &.red        { @include setColor($red);        }
+        &.orange     { @include setColor($orange);     }
+        &.silver     { @include setColor($silver);     }
     }
 }
 .icon {

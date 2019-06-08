@@ -6,20 +6,33 @@
             :name="'radio'+group" 
             type="radio"
         />
-        <div class="icon"></div>
+        <div :class="classes" class="icon"></div>
         {{label}}
     </label>
 </template>
 
 <script>
 export default {
-    props: ['val', 'label', 'group']
+    props: {
+        color: { type: String, default: 'silver' },
+        val:   { type: String },
+        label: { type: String },
+        group: { type: String }
+    },
+    computed: {
+        classes() {
+            return {
+                [this.color]: true
+            };
+        }
+    }
 }
 </script>
 
 <style scoped lang="scss">
+@import './styles.scss';
+
 $color-primary: #005caf;
-$color-dark: #727272;
 $size: 20px;
 
 .component-ui-input-radio {
@@ -42,6 +55,19 @@ input[type="radio"] {
         border: 2px solid $color-primary;
     }
 }
+
+
+// input[type="radio"] {
+//     &:checked + .icon:after {
+//         background: $color-primary;
+//     }
+//     &:checked + .icon {
+//         border: 2px solid $color-primary;
+//     }
+// }
+
+
+
 .icon {
     display: flex;
     justify-content: center;
@@ -49,7 +75,7 @@ input[type="radio"] {
     width: $size;
     height: $size;
     margin: 10px;
-    border: 2px solid $color-dark;
+    border: 2px solid $gray;
     border-radius: 50%;
 }
 </style>

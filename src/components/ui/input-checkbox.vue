@@ -6,20 +6,30 @@
             :value="val" 
             type="checkbox" 
         />
-        <div class="icon"></div>
+        <div :class="classes" class="icon"></div>
         {{label}}    
     </label>
 </template>
 
 <script>
 export default {
-    props: ['value', 'val', 'label'],
+    props: {
+        color: { type: String, default: 'silver' },
+        value: { },
+        val:   { type: String },
+        label: { type: String }
+    },
     data () {
         return {
             checkedProxy: false
         }
     },
     computed: {
+        classes() {
+            return {
+                [this.color]: true
+            };
+        },
         checked: {
             get() {
                 return this.value;
@@ -38,9 +48,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$color-primary: #005caf;
-$color-dark: #727272;
+@import './styles.scss';
+
 $size: 20px;
+
+@mixin setColor($color) {
+    border: 2px solid $color;
+    background: $color;
+}
 
 .component-ui-input-checkbox {
     display: flex;
@@ -61,8 +76,13 @@ input[type="checkbox"] {
         font-size: 13px;
     }
     &:checked + .icon {
-        border: 2px solid $color-primary;
-        background: $color-primary;
+        &.indigo     { @include setColor($indigo); }
+        &.blue       { @include setColor($blue); }
+        &.blue-light { @include setColor($blue-light); }
+        &.green      { @include setColor($green); }
+        &.red        { @include setColor($red); }
+        &.orange     { @include setColor($orange); }
+        &.silver     { @include setColor($silver); }
     }
 }
 .icon {
@@ -72,7 +92,7 @@ input[type="checkbox"] {
     width: $size;
     height: $size;
     margin: 10px;
-    border: 2px solid $color-dark;
+    border: 2px solid $gray;
     border-radius: 3px;
 }
 </style>

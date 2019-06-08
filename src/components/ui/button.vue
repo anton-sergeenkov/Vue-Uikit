@@ -25,6 +25,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import './styles.scss';
+
 $color-normal: #f5f5f5;
 $color-primary: #2195f3;
 $box-shadow: 

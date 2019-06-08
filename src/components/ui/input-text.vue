@@ -45,6 +45,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import './styles.scss';
+
 $color-light: #747474;
 $color-accent: #1867c0;
 $font-size: 15px;

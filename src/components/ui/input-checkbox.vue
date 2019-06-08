@@ -1,20 +1,19 @@
 <template>
-    <div class="my-check-box">
-        <label>
-            <input type="checkbox" :value="val" v-model="checked" @change="onChange" />
-            {{label}}
-        </label>
-    </div>
+    <label class="component-ui-input-checkbox">
+        <input 
+            v-model="checked" 
+            @change="onChange"
+            :value="val" 
+            type="checkbox" 
+        />
+        <div class="icon"></div>
+        {{label}}    
+    </label>
 </template>
 
 <script>
 export default {
-    props: {
-        value:   { type: String },
-        val:     { type: String },
-        label:   { type: String },
-        checked: { type: Boolean }
-    },
+    props: ['value', 'val', 'label'],
     data () {
         return {
             checkedProxy: false
@@ -43,13 +42,13 @@ $color-primary: #005caf;
 $color-dark: #444444;
 $size: 20px;
 
-.component-ui-input-radio {
+.component-ui-input-checkbox {
     display: flex;
     align-items: center;
     cursor: pointer;
     user-select: none;
 }
-input[type="radio"] {
+input[type="checkbox"] {
     display: none;
     &:checked + .icon:after {
         content: '';

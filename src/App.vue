@@ -112,7 +112,7 @@ h3 {
         flex-wrap: wrap;
         position: relative;
         max-width: 800px;
-        margin: 20px 0px;
+        margin: 20px auto;
         padding: 55px 20px 20px 20px;
         border-radius: .25rem;
         background: #fff;

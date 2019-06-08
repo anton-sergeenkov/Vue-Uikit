@@ -4,9 +4,8 @@
             @input="$emit('input', $event.target.value)"
             :value="val"
             :name="'radio'+group" 
-            :checked="checked"
             type="radio"
-        >
+        />
         <div class="icon"></div>
         {{label}}
     </label>
@@ -14,12 +13,7 @@
 
 <script>
 export default {
-    props: {
-        val:     { type: String },
-        label:   { type: String },
-        group:   { type: String },
-        checked: { type: Boolean }
-    }
+    props: ['val', 'label', 'group']
 }
 </script>
 

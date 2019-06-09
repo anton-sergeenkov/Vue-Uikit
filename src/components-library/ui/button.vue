@@ -51,6 +51,9 @@ $box-shadow:
 @mixin setColor($bg-color, $color) {
     background-color: $bg-color; 
     color: $color;
+    &:hover {
+        background-color: transparentize($bg-color, 0.35);
+    }
 }
 
 .component-ui-button.v-custom-- {

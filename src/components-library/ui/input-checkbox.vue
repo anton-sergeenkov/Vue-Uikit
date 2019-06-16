@@ -7,7 +7,7 @@
             type="checkbox" 
         />
         <div :class="classes" class="icon"></div>
-        {{label}}    
+        <span v-html="label"></span>
     </label>
 </template>
 
@@ -40,7 +40,7 @@ export default {
         }
     },
     methods: {
-        onChange: function(e) {
+        onChange(e) {
             this.$emit('input', this.checkedProxy);
         }
     }

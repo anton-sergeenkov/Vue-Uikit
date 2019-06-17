@@ -1,16 +1,14 @@
 <template>
     <transition name="fade">
         <div class="component-ui-modal-dialog" @click="checkClose" ref="wrapper">
-
             <div class="modal-dialog">
-                <!-- <div class="header">
+                <div class="header">
                     <slot name="header">Default Header</slot>
-                </div> -->
+                </div>
                 <div class="form">
                     <slot name="form">Default Form</slot>
                 </div>
             </div>
-
         </div>
     </transition>
 </template>
@@ -48,7 +46,7 @@ export default {
 <style scoped lang="scss">
 $color-wrapper: rgba(0,0,0,0.3);
 $color-form: #fff;
-$color-form-header: #304a58;
+$color-form-header: #dddcdc;
 $fz-header: 20px;
 
 .component-ui-modal-dialog {
@@ -69,10 +67,10 @@ $fz-header: 20px;
     background-color: $color-form;
     box-shadow: 0px 5px 5px 0px $color-wrapper;
     .header {
-        font-size: $fz-header;
+        padding: 20px 30px;
         background: $color-form-header;
-        color: #fff;
-        padding: 20px;
+        font-size: $fz-header;
+        color: rgba(0,0,0,0.65);
     }
     .form {
         padding: 20px;

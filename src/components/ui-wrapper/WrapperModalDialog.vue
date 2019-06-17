@@ -3,7 +3,7 @@
 
         <h1>&lt;ui-modal-dialog&gt;&lt;/ui-modal-dialog&gt;</h1>
 
-        <ui-button label="Открыть окно" @click.native="handleClick" />
+        <ui-button label="Открыть окно" color="blue" @click.native="handleClick" />
 
         <ui-modal-dialog v-if="openModal" @close="closeModal">
             <template v-slot:header>Message</template>
@@ -56,6 +56,6 @@ export default {
     padding: 20px;
 }
 .wrapper-form p {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 </style>

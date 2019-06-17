@@ -8,6 +8,7 @@
             <ui-wrapper-input-radio    id="ui-input-radio"/>
             <ui-wrapper-input-checkbox id="ui-input-checkbox" />
             <ui-wrapper-input-text     id="ui-input-text" />
+            <ui-wrapper-modal-dialog   id="ui-modal-dialog" />
             <ui-wrapper-toast          id="ui-toast" />
         </div>
 
@@ -21,6 +22,7 @@ import WrapperButton        from './components/ui-wrapper/WrapperButton.vue';
 import WrapperInputRadio    from './components/ui-wrapper/WrapperInputRadio.vue';
 import WrapperInputCheckbox from './components/ui-wrapper/WrapperInputCheckbox.vue';
 import WrapperInputText     from './components/ui-wrapper/WrapperInputText.vue';
+import WrapperModalDialog   from './components/ui-wrapper/WrapperModalDialog.vue';
 import WrapperInputToast    from './components/ui-wrapper/WrapperInputToast.vue';
 
 export default {
@@ -31,6 +33,7 @@ export default {
         'ui-wrapper-input-radio':    WrapperInputRadio,
         'ui-wrapper-input-checkbox': WrapperInputCheckbox,
         'ui-wrapper-input-text':     WrapperInputText,
+        'ui-wrapper-modal-dialog':   WrapperModalDialog,
         'ui-wrapper-toast':          WrapperInputToast
     }
 }

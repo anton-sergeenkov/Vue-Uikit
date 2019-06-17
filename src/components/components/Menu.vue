@@ -1,11 +1,12 @@
 <template>
     <ul>
-        <!-- 🐱 🐶 🐹 🐰 🦁 🐸 🦅 🦇 🐺 🐗 🐴 🦄 🕷 🦒 🐿 🦔  -->
+        <!-- 🐱 🐹 🐰 🦁 🐸 🦅 🦇 🐺 🐗 🐴 🦄 🕷 🦒 🐿 🦔  -->
         <!-- 🍩 🍕 🍦 -->
         <li><a href="#ui-button">🐼 ui-button</a></li>
         <li><a href="#ui-input-radio">🐨 ui-input-radio</a></li>
         <li><a href="#ui-input-checkbox">🦍 ui-input-checkbox</a></li>
         <li><a href="#ui-input-text">🐻 ui-input-text</a></li>
+        <li><a href="#ui-modal-dialog">🐶 ui-modal-dialog</a></li>
 
         <li><a href="#ui-toast">🦊 ui-toast</a></li>
     </ul>

@@ -8,8 +8,10 @@
         <h3>Result: {{inputName}} {{inputEmail}}</h3>
 
         <h2>
+            type="text | number" <br>
             label="Комментарий" <br>
-            color="indigo | blue | blue-light | green | red | orange | silver"
+            color="indigo | blue | blue-light | green | red | orange | silver" <br>
+            v-model="data"
         </h2> 
     </div>
 </template>
